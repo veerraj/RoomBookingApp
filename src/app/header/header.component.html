@@ -1,0 +1,87 @@
+<!-- 
+<mat-toolbar>
+<mat-toolbar-row>
+    <div fxFlex fxLayout="row" fxLayoutAlign="flex-start center">
+        <li><img src="../../assets/panda1.png" alt="roompanda" style="height: 60px;width: 60px;margin-top: 8px;"></li>
+        <ul fxLayout="row" fxLayoutGap="0px">
+        <li>
+          <button mat-button  disableRipple><mat-icon>home</mat-icon> <b>Home</b></button>
+        </li>
+        <li>
+            <button mat-button disableRipple><mat-icon>view_headline</mat-icon> <b>Category</b></button>
+          </li>
+
+     
+         </ul>
+      </div>
+      <li>
+            
+        <mat-form-field style="margin-top:10px">
+            <input matInput 
+            type="text" >
+            <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+      </li>
+      <div fxFlex fxLayout="row" fxLayoutAlign="flex-end center">
+        <ul fxLayout="row" fxLayoutGap="5px">
+        <li>
+          <button mat-button  disableRipple><mat-icon>person</mat-icon> <b>Login as Landlord</b></button>
+        </li>
+        <li>
+            <button mat-button disableRipple><mat-icon>input</mat-icon> <b>login</b></button>
+          </li>
+       
+          
+        
+         </ul>
+      </div>
+</mat-toolbar-row>
+
+</mat-toolbar>
+<mat-divider></mat-divider> -->
+<!-- <div style="height: 100vh;"> -->
+<div >
+    <mat-toolbar class="toolbarstyle">
+        <span class="example-spacer">
+            <li><img src="../../assets/panda1.png" alt="roompanda" style="height: 60px;width: 60px;"></li>
+    
+        </span>
+        <div>
+            <a mat-button [routerLink]="['/home']" >
+                <mat-icon>home</mat-icon><b class="txtstyle">Home</b>
+            </a>
+            <a mat-button  *ngIf="cond">
+                <mat-icon>menu</mat-icon><b class="txtstyle">Category</b>
+            </a>
+             
+              
+        </div>
+        <div class="search" *ngIf="cond">
+            <mat-form-field >
+                <input matInput 
+                type="text" >
+                <mat-icon matSuffix>search</mat-icon>
+            </mat-form-field>
+        </div>
+        <div fxShow="true" fxHide.lt-md="true" fxLayout="row" fxFlex fxLayoutAlign="flex-end center">
+            <a  mat-button (click)="check()" *ngIf="!cond"><mat-icon>person</mat-icon> <b class="txtstyle">Register</b></a>
+            <a  mat-button (click)="check1()" *ngIf="!cond"><mat-icon>input</mat-icon> <b class="txtstyle">login</b></a>
+            <a  mat-button  (click)="logout()" [hidden]="!cond"><mat-icon>input</mat-icon><b  class="txtstyle">logout</b></a>
+        </div>
+        <div fxShow="true" fxHide.gt-sm="true" fxLayout="row" fxFlex fxLayoutAlign="flex-end center" fxLayoutAlign.xs="flex-end center">
+            <button mat-icon-button [matMenuTriggerFor]="appMenu">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #appMenu="matMenu" fxLayoutAlign.xs="flex-end center">
+                <a  mat-button  (click)="check()" [hidden]="cond"><mat-icon>person</mat-icon><b class="txtstyle">Register</b></a><br>
+                <a  mat-button  (click)="check1()" [hidden]="cond"><mat-icon>input</mat-icon><b  class="txtstyle">login</b></a>
+                <a  mat-button  (click)="logout()" [hidden]="!cond"><mat-icon>input</mat-icon><b  class="txtstyle">logout</b></a>
+            </mat-menu>
+        </div>
+    
+    </mat-toolbar>
+
+    
+   
+   
+<!-- </div> -->

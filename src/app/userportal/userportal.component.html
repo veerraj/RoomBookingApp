@@ -1,0 +1,76 @@
+<div>
+    <!-- <mat-toolbar color="primary" class="toolbar">
+        <img src="../../../assets/amazon.png" style="height: 50px;width: 90px;margin-top:10px">
+        <span style="flex:auto" align="end" [hidden]="hide">
+            <mat-icon class="icon">shopping_cart</mat-icon>
+            <h5 [routerLink]="['checkout']">Checkout</h5>
+        </span>
+    </mat-toolbar> -->
+
+    <!-- <div  class="container-fluid" style="
+            background:linear-gradient(45deg, black, transparent);
+            margin-top: 65px;">
+    <div class="col-12 col-xs-12">
+   
+        <ngb-carousel>
+             <ng-template ngbSlide>
+                    <div class="carousel-caption">
+                        <h4>Great Indian Sale....</h4>
+                   </div>
+                    <img src="../../assets/2020-03-03T11:07:35.393Ztees.png" alt="image" class="img-cls">
+                   
+                </ng-template>
+                <ng-template ngbSlide>
+                    <img src="../../assets/laptop.png" alt="image" class="img-cls">
+                   <div class="carousel-caption">
+                    <h4>50% off....</h4>
+                       </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                    <img src="../../assets/lap1.png" alt="image" class="img-cls">
+                   <div class="carousel-caption">
+                    <h4>50% off....</h4>
+                       </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                    <img src="../../assets/mobile.png" alt="image" class="img-cls">
+                   <div class="carousel-caption">
+                    <h4>50% off....</h4>
+                       </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
+   
+
+</div> -->
+<button *ngIf="outlet.isActivated==false" mat-raised-button class="mybtn" (click)="onFilter()" disableRipple color="warn"><mat-icon>filter_list</mat-icon>Filter</button>
+    <div *ngIf="outlet.isActivated==false" style="margin-top:100px" class="container" fxLayout="row wrap"
+        fxLayout.xs="column" fxLayoutWrap fxLayoutGap="20px" fxLayoutAlign="start center">
+      
+        <ng-container>
+           
+            <mat-card fxFlex="calc(25%-25px)" fxFlex.sm="calc(50%-25px)" *ngFor="let room  of rooms;let i=index;" class="mycard mat-elevation-z8" (click)="navigate(room.Id)">
+                <!-- <mat-card-title>{{room.location}}</mat-card-title>
+                <mat-card-subtitle><b>{{room.contact}}</b> </mat-card-subtitle> -->
+                <mat-card-content style="text-align: center;">
+                    <img class="myimage" [src]='this.sanitizer.bypassSecurityTrustUrl("data:image/jpeg;base64," + room.image)' mat-card-image><br>
+
+                <mat-divider></mat-divider>
+                </mat-card-content>
+                <b>₹ {{room.price}}</b>
+                <p align="end">Loaction : {{room.location}} | Contact : {{room.contact}}</p>
+          
+                <!-- <br>
+                {{room.description}} -->
+                <!-- <mat-card-actions>
+
+                    <button mat-raised-button color="warn" style="float:right" (click)="checkOut(product)">
+                        <mat-icon>shopping_cart</mat-icon> Checkout
+                    </button>
+                </mat-card-actions> -->
+            </mat-card>
+        </ng-container>
+      
+    </div>
+</div>
+<router-outlet #outlet=outlet></router-outlet>

@@ -1,0 +1,29 @@
+/* p{
+    margin-top:80px;
+} */
+.img-cls{
+  height:auto;
+  width: 100%;
+  max-width: 100%;
+}
+:focus{
+    outline: none !important;
+}
+.borderstyle{
+    height: 2px;
+    background-color: #0093e4;
+    display: inline-block;
+    width: 50px;
+    position: relative;
+    bottom: 20px;
+
+}
+.property-view__amenity{
+    color:#525f7f;
+    font-family: 'trueno-l';
+    font-size: 0.9rem;
+}
+.property-view__ic{
+    width: 20px;
+    margin-right: 5px;
+}

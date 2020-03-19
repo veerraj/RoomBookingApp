@@ -1,0 +1,80 @@
+<div class="outer-div">
+    <div>
+        <button class="btn" mat-raised-button (click)="addRoom()">
+            <mat-icon>add</mat-icon>Add New Room
+        </button>
+    </div>
+    
+    
+    <mat-form-field>
+        <mat-label>Search Rooms</mat-label>
+        <input matInput 
+        type="text" 
+        name="name"
+        (keyup)="filter($event.target.value)"
+        >
+      </mat-form-field>
+      <div class="mat-elevation-z8 tablestyle">
+    <mat-table [dataSource]="dataSource" >
+        
+    
+        <ng-container matColumnDef="position">
+            <mat-header-cell *matHeaderCellDef > Id </mat-header-cell>
+            <mat-cell *matCellDef="let element;let i=index"> {{i+1}} </mat-cell>
+        </ng-container>
+    
+
+        <ng-container matColumnDef="image">
+            <mat-header-cell *matHeaderCellDef > Room Image </mat-header-cell>
+            <mat-cell *matCellDef="let element;let i=index"> <img [src]='this.sanitizer.bypassSecurityTrustUrl("data:image/jpeg;base64," + element.image)' class="image"
+            (click)="onPopup(i)"> </mat-cell>
+        </ng-container>
+    
+ 
+        <ng-container matColumnDef="location">
+            <mat-header-cell *matHeaderCellDef > Location </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.location}} </mat-cell>
+        </ng-container>
+    
+      
+        <ng-container matColumnDef="contact">
+            <mat-header-cell *matHeaderCellDef > Contact </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.contact}} </mat-cell>
+        </ng-container>
+    
+    
+       <ng-container matColumnDef="price">
+            <mat-header-cell *matHeaderCellDef > Price </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.price}} </mat-cell>
+        </ng-container>
+    
+    
+    
+        
+        <ng-container matColumnDef="description">
+            <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.description}} </mat-cell>
+        </ng-container> 
+    
+        <ng-container matColumnDef="action-delete">
+            <mat-header-cell *matHeaderCellDef>  </mat-header-cell>
+            <mat-cell *matCellDef="let element"> <mat-icon (click)="onDelete(element.Id)" color="warn">delete</mat-icon> </mat-cell>
+        </ng-container> 
+    
+        <ng-container matColumnDef="action-edit">
+            <mat-header-cell *matHeaderCellDef>  </mat-header-cell>
+            <mat-cell *matCellDef="let element"> <mat-icon  color="primary" (click)="onEdit(element,element.id)">edit</mat-icon> </mat-cell>
+        </ng-container> 
+    
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        
+        
+    </mat-table>
+    <!-- <mat-paginator
+                   [pageSizeOptions]="[5, 10, 25]"
+                   showFirstLastButtons>
+    </mat-paginator> -->
+    </div>
+    </div>
+    

@@ -1,0 +1,50 @@
+<div>
+<mat-toolbar color="primary">
+    <!-- <mat-toolbar-row> -->
+        <span>Filter</span>
+       <mat-icon   align="end" style="flex:auto;cursor: pointer;" (click)="cancel()">clear</mat-icon>
+    <!-- </mat-toolbar-row> -->
+</mat-toolbar>
+    <mat-card>
+        <mat-card-title style="color:#32325d">
+            Location
+        </mat-card-title>
+        <span class="borderstyle"></span>
+        <mat-card-content>
+            <section class="example-section">
+            <div class="row">
+                <div class="col-md-6 col-6 mt-1">
+                    <mat-checkbox class="example-margin" [(ngModel)]="udaipur">Udaipur</mat-checkbox>
+                </div>
+
+
+                <div class="col-md-6 col-6 mt-1">
+                    <mat-checkbox class="example-margin" [(ngModel)]="jaipur">Jaipur</mat-checkbox>
+                </div>
+                <div class="col-md-6 col-6 mt-1">
+                    <mat-checkbox class="example-margin" [(ngModel)]="kota">Kota</mat-checkbox>
+                </div>
+                <div class="col-md-6 col-6 mt-1">
+                    <mat-checkbox class="example-margin" [(ngModel)]="Jalor">Jalor</mat-checkbox>
+                </div>
+                <!-- <div class="col-md-6 col-6 mt-1">
+                    <img src="https://d2bxpw04qb5rhq.cloudfront.net/production/master_property_free_amenity/icon/12/1f45f4eb7ef48bb7c4a751e890fdedda79b1065b91035e6a2b7502ac9e19fbcd9e8e76967ef81b8b/marker_news.png" class="property-view__ic">
+                    <span class="property-view__amenity">News Paper</span>
+                </div>
+                <div class="col-md-6 col-6 mt-1">
+                    <img src="https://d2bxpw04qb5rhq.cloudfront.net/production/master_property_free_amenity/icon/11/f74ae06bd532e1b289e53b784ab84543bc33553b388923090668485fa4aa652211fb3c803306b314/marker_security.png" class="property-view__ic">
+                    <span class="property-view__amenity">Security Guard</span>
+                </div> -->
+                <!-- <div class="col-md-6 col-6 mt-1">
+                    <img src="https://d2bxpw04qb5rhq.cloudfront.net/production/master_property_free_amenity/icon/12/1f45f4eb7ef48bb7c4a751e890fdedda79b1065b91035e6a2b7502ac9e19fbcd9e8e76967ef81b8b/marker_news.png" class="property-view__ic">
+                    <span class="property-view__amenity">News Paper</span>
+                </div> -->
+            </div>
+        </section>
+        </mat-card-content>
+     <button mat-raised-button color="primary" click="apply()">Apply</button>
+        
+    </mat-card>
+   
+
+</div>

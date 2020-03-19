@@ -1,0 +1,68 @@
+
+.avatar {
+    background-image: url('https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/10_avatar-512.png');
+    background-size: cover;
+}
+
+.toolbar{
+    background:rgb(35, 47, 62);
+    color:white;
+    /* position: fixed;
+    z-index: 1000;
+    top:0; */
+}
+mat-card{
+    background:rgb(35, 47, 62);
+    color:white;
+    
+}
+.list-style{
+  margin-top: 10px;
+ margin-left: 20px;
+
+
+}
+/* li{
+    list-style: none;
+    cursor: pointer;
+    position: relative;
+    top: 8px;
+    height: 38px;
+
+    left: 17px;
+  
+}
+.list-style{
+  
+       margin-top: 10px;
+    margin-left: 20px;
+
+ 
+}
+li.active{
+    background-color: #b9b6b6;
+  
+}
+.active:hover{
+    background-color: #b9b6b6;
+}
+.item-icon{
+    position: relative;
+    left: 35px;
+    top: 5px;
+    color:rgb(35, 47, 62);
+    
+}
+.item{
+    position: relative;
+    left: 47px;
+    font-size: 16px;
+} */
+
+.top{
+    position: relative;
+    top:10px;
+} 
+:focus{
+    outline: none;
+}

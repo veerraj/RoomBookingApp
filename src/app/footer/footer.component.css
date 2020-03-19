@@ -1,0 +1,22 @@
+.footer{
+    background-color: rgba(14,14,14,.9) !important;
+    color:white;
+    padding: 10px;
+    position: relative;
+   }
+li{
+    list-style: none;
+}
+
+/* .mat-form-field-outline{
+    color:white !important
+} */
+p{
+    color: #777;
+    line-height: 24px;
+    margin: 0 0 20px;
+}
+.sty{
+    position: relative;
+    left: 110px;
+}

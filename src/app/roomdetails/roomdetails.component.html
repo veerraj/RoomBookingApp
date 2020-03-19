@@ -1,0 +1,101 @@
+<!-- <p>your room is here and your booking id is {{id}}</p> -->
+<div fxLayout="row wrap" fxLayout.xs="column">
+    <div fxFlex="calc(25%-25px)" fxFlex.sm="calc(33%-25px)" fxFlex.md="calc(33%-25px)" fxLayoutAlign="center">
+
+        <div class="container-fluid" style="
+
+            margin-top: 65px;" fxLayout="column">
+            <div class="col-12 col-xs-12" style="position: relative;
+    top: 15px;">
+
+                <ngb-carousel>
+                    <ng-template ngbSlide>
+                        <div class="carousel-caption">
+                            <h4>Great Indian Sale....</h4>
+                        </div>
+                        <img src="../../assets/room.jpg" alt="image" class="img-cls">
+
+                    </ng-template>
+                    <ng-template ngbSlide>
+                        <img src="../../assets/room1.jpg" alt="image" class="img-cls">
+                        <div class="carousel-caption">
+                            <h4>50% off....</h4>
+                        </div>
+                    </ng-template>
+                    <ng-template ngbSlide>
+                        <img src="../../assets/room2.jpg" alt="image" class="img-cls">
+                        <div class="carousel-caption">
+                            <h4>50% off....</h4>
+                        </div>
+                    </ng-template>
+                    <!-- <ng-template ngbSlide>
+                    <img src="../../assets/mobile.png" alt="image" class="img-cls">
+                   <div class="carousel-caption">
+                    <h4>50% off....</h4>
+                       </div>
+                </ng-template> -->
+                </ngb-carousel>
+                <mat-divider></mat-divider>
+                <div>
+                    <mat-card>
+                        <mat-card-title style="color:#32325d">
+                            Amentties
+                        </mat-card-title>
+                        <span class="borderstyle"></span>
+                        <mat-card-content>
+                            <div class="row">
+                                <div class="col-md-6 col-6 mt-1">
+                                    <img src="https://d2bxpw04qb5rhq.cloudfront.net/production/master_property_free_amenity/icon/1/76c27aa51b6b9f8424a1c3d990710ca1142961f339489cbcf9ee9bcf2e8e987917e3376e64e42c97/marker_south.png" class="property-view__ic">
+                                    <span class="property-view__amenity">South Indian Food</span>
+                                </div>
+
+
+                                <div class="col-md-6 col-6 mt-1">
+                                    <img src="https://d2bxpw04qb5rhq.cloudfront.net/production/master_property_free_amenity/icon/5/80b2dcd1bdd36d3f5d5c2716ff6979cffbaebfe3d597f7e28386fe558e352d300287c454423ab841/marker_cc_camera.png" class="property-view__ic">
+                                    <span class="property-view__amenity">CC Cemras</span>
+                                </div>
+                                <div class="col-md-6 col-6 mt-1">
+                                    <img src="https://d2bxpw04qb5rhq.cloudfront.net/production/master_property_free_amenity/icon/22/ac7bd9fd664957016cfcf7ec32e7e1350b12accf9796165bf717a6ed65ea788984fe010830b34635/marker_wifi.png" class="property-view__ic">
+                                    <span class="property-view__amenity">Wi-Fi</span>
+                                </div>
+                                <div class="col-md-6 col-6 mt-1">
+                                    <img src="https://d2bxpw04qb5rhq.cloudfront.net/production/master_property_free_amenity/icon/12/1f45f4eb7ef48bb7c4a751e890fdedda79b1065b91035e6a2b7502ac9e19fbcd9e8e76967ef81b8b/marker_news.png" class="property-view__ic">
+                                    <span class="property-view__amenity">News Paper</span>
+                                </div>
+                                <div class="col-md-6 col-6 mt-1">
+                                    <img src="https://d2bxpw04qb5rhq.cloudfront.net/production/master_property_free_amenity/icon/11/f74ae06bd532e1b289e53b784ab84543bc33553b388923090668485fa4aa652211fb3c803306b314/marker_security.png" class="property-view__ic">
+                                    <span class="property-view__amenity">Security Guard</span>
+                                </div>
+                                <!-- <div class="col-md-6 col-6 mt-1">
+                                    <img src="https://d2bxpw04qb5rhq.cloudfront.net/production/master_property_free_amenity/icon/12/1f45f4eb7ef48bb7c4a751e890fdedda79b1065b91035e6a2b7502ac9e19fbcd9e8e76967ef81b8b/marker_news.png" class="property-view__ic">
+                                    <span class="property-view__amenity">News Paper</span>
+                                </div> -->
+                            </div>
+                        </mat-card-content>
+
+                        <mat-card-title style="color:#32325d">
+                            Description
+                        </mat-card-title>
+                        <span class="borderstyle"></span>
+                    </mat-card>
+                    <mat-card-content>
+                        
+                    </mat-card-content>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div fxFlex="calc(25%-25px)" fxFlex.sm="calc(33%-25px)" fxFlex.md="calc(33%-25px)">
+        <mat-card class="fixed-card" style="margin-top:80px">
+            <mat-card-title style="color:#32325d"><b>Price Details</b></mat-card-title>
+            <mat-divider></mat-divider>
+            <p class="parstyle">Items <b class="bstyle">{{count}}</b> </p>
+            <p class="parstyle">Delivery Fee <i style="color: #388e3c;" class="bstyle">FREE</i></p>
+            <mat-divider></mat-divider>
+            <p class="parstyle">Total Payable <b class="bstyle">₹{{price}}</b> </p>
+        </mat-card>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<mat-toolbar color="warn">
+  <mat-toolbar-row>Register</mat-toolbar-row>
+  </mat-toolbar>
+<div class="wrapper">
+    <!-- <mat-card class="my-card"> -->
+      <div class="my-class">
+        <!-- <mat-card-title class="title-color">Register</mat-card-title> -->
+        <form [formGroup]="myform" (ngSubmit)="onRegister()">
+    <!-- <form> -->
+      <mat-form-field color="warn">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Enter Name" type="text" formControlName="name" required>
+      </mat-form-field>
+          <mat-form-field color="warn">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Enter Email" type="email" formControlName="email" required>
+          </mat-form-field><br>
+          <mat-form-field color="warn">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="password" type="password"  formControlName="password" #pass>
+            <mat-icon (click)="pass.type=pass.type=='password'?'text':'password'" color="warn">
+              remove_red_eye
+          </mat-icon>
+          </mat-form-field>
+          <mat-form-field class="role">
+            <mat-label>Role</mat-label>
+            <mat-select formControlName="role" >
+                <mat-option value="owner">Owner</mat-option>
+                <mat-option value="user">User</mat-option>
+            </mat-select>
+          </mat-form-field><br>
+          <button mat-raised-button color="warn" type="submit">REGISTER</button>
+    
+        </form>
+      </div>
+      <!-- <span>Already Registered?<button mat-button color="warn" (click)="onNavigate()" disableRipple>
+        Login
+      </button></span> -->
+    <!-- </mat-card> -->
+    </div>

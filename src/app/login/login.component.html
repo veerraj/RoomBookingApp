@@ -1,0 +1,31 @@
+<mat-toolbar color="warn">
+<mat-toolbar-row>Login</mat-toolbar-row>
+</mat-toolbar>
+<div  class="wrapper">
+  <div class="my-class">
+    <!-- <mat-card class="my-card">
+      
+        <mat-card-title class="title-color">Login</mat-card-title> -->
+  <form [formGroup]="myform" (ngSubmit)="onLogin()">
+            <!-- <form> -->
+          <mat-form-field color="warn">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Enter Email" type="email" formControlName="email"  required>
+          </mat-form-field><br>
+          <mat-form-field color="warn">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="password" type="password" formControlName="password"  #pass>
+            <mat-icon (click)="pass.type=pass.type=='password'?'text':'password'" color="warn">
+              remove_red_eye
+          </mat-icon>
+          </mat-form-field>
+          <br>
+          <button mat-raised-button color="warn" type="submit">LOGIN</button>
+    
+        </form>
+      </div>
+      <!-- <span>New User?<button mat-button color="warn" disableRipple>
+        Register
+      </button></span> -->
+    <!-- </mat-card> -->
+    </div>
