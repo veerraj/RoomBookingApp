@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { NotifierModule, NotifierOptions } from "angular-notifier";
 import { StoreModule } from '@ngrx/store'
 
-
+import { NgxStripeModule } from 'ngx-stripe'
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
@@ -25,6 +25,8 @@ import { AddnewroomComponent } from './addnewroom/addnewroom.component'
 import { MaterialFileInputModule } from 'ngx-material-file-input';
 import { RoomdetailsComponent } from './roomdetails/roomdetails.component';
 import { FilterComponent } from './filter/filter.component';
+import { reducer } from './store/room.reducer';
+import { PaysuccessComponent } from './roomdetails/paysuccess/paysuccess.component';
 
 const customNotifierOptions: NotifierOptions = {
   position: {
@@ -53,7 +55,8 @@ const customNotifierOptions: NotifierOptions = {
     AddroomsComponent,
     AddnewroomComponent,
     RoomdetailsComponent,
-    FilterComponent
+    FilterComponent,
+    PaysuccessComponent
   ],
   imports: [
     BrowserModule,
@@ -70,12 +73,14 @@ const customNotifierOptions: NotifierOptions = {
     NotifierModule.withConfig(
       customNotifierOptions
     ),
-    // StoreModule.forRoot({
+    StoreModule.forRoot({
+         rooms:reducer
+    }),
+    NgxStripeModule.forRoot('pk_test_PgdqnLqr0caeeS5Ze2wmkIDN00GTldYQ7a')
 
-    // })
   ],
   providers: [],
-  entryComponents:[RegisterComponent,LoginComponent,AddnewroomComponent,FilterComponent],
+  entryComponents:[RegisterComponent,LoginComponent,AddnewroomComponent,FilterComponent,PaysuccessComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

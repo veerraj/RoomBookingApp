@@ -10,23 +10,23 @@
 
                 <ngb-carousel>
                     <ng-template ngbSlide>
-                        <div class="carousel-caption">
+                        <!-- <div class="carousel-caption">
                             <h4>Great Indian Sale....</h4>
-                        </div>
+                        </div> -->
                         <img src="../../assets/room.jpg" alt="image" class="img-cls">
 
                     </ng-template>
                     <ng-template ngbSlide>
                         <img src="../../assets/room1.jpg" alt="image" class="img-cls">
-                        <div class="carousel-caption">
+                        <!-- <div class="carousel-caption">
                             <h4>50% off....</h4>
-                        </div>
+                        </div> -->
                     </ng-template>
                     <ng-template ngbSlide>
                         <img src="../../assets/room2.jpg" alt="image" class="img-cls">
-                        <div class="carousel-caption">
+                        <!-- <div class="carousel-caption">
                             <h4>50% off....</h4>
-                        </div>
+                        </div> -->
                     </ng-template>
                     <!-- <ng-template ngbSlide>
                     <img src="../../assets/mobile.png" alt="image" class="img-cls">
@@ -45,25 +45,30 @@
                         <mat-card-content>
                             <div class="row">
                                 <div class="col-md-6 col-6 mt-1">
-                                    <img src="https://d2bxpw04qb5rhq.cloudfront.net/production/master_property_free_amenity/icon/1/76c27aa51b6b9f8424a1c3d990710ca1142961f339489cbcf9ee9bcf2e8e987917e3376e64e42c97/marker_south.png" class="property-view__ic">
+                                    <img src="https://d2bxpw04qb5rhq.cloudfront.net/production/master_property_free_amenity/icon/1/76c27aa51b6b9f8424a1c3d990710ca1142961f339489cbcf9ee9bcf2e8e987917e3376e64e42c97/marker_south.png"
+                                        class="property-view__ic">
                                     <span class="property-view__amenity">South Indian Food</span>
                                 </div>
 
 
                                 <div class="col-md-6 col-6 mt-1">
-                                    <img src="https://d2bxpw04qb5rhq.cloudfront.net/production/master_property_free_amenity/icon/5/80b2dcd1bdd36d3f5d5c2716ff6979cffbaebfe3d597f7e28386fe558e352d300287c454423ab841/marker_cc_camera.png" class="property-view__ic">
+                                    <img src="https://d2bxpw04qb5rhq.cloudfront.net/production/master_property_free_amenity/icon/5/80b2dcd1bdd36d3f5d5c2716ff6979cffbaebfe3d597f7e28386fe558e352d300287c454423ab841/marker_cc_camera.png"
+                                        class="property-view__ic">
                                     <span class="property-view__amenity">CC Cemras</span>
                                 </div>
                                 <div class="col-md-6 col-6 mt-1">
-                                    <img src="https://d2bxpw04qb5rhq.cloudfront.net/production/master_property_free_amenity/icon/22/ac7bd9fd664957016cfcf7ec32e7e1350b12accf9796165bf717a6ed65ea788984fe010830b34635/marker_wifi.png" class="property-view__ic">
+                                    <img src="https://d2bxpw04qb5rhq.cloudfront.net/production/master_property_free_amenity/icon/22/ac7bd9fd664957016cfcf7ec32e7e1350b12accf9796165bf717a6ed65ea788984fe010830b34635/marker_wifi.png"
+                                        class="property-view__ic">
                                     <span class="property-view__amenity">Wi-Fi</span>
                                 </div>
                                 <div class="col-md-6 col-6 mt-1">
-                                    <img src="https://d2bxpw04qb5rhq.cloudfront.net/production/master_property_free_amenity/icon/12/1f45f4eb7ef48bb7c4a751e890fdedda79b1065b91035e6a2b7502ac9e19fbcd9e8e76967ef81b8b/marker_news.png" class="property-view__ic">
+                                    <img src="https://d2bxpw04qb5rhq.cloudfront.net/production/master_property_free_amenity/icon/12/1f45f4eb7ef48bb7c4a751e890fdedda79b1065b91035e6a2b7502ac9e19fbcd9e8e76967ef81b8b/marker_news.png"
+                                        class="property-view__ic">
                                     <span class="property-view__amenity">News Paper</span>
                                 </div>
                                 <div class="col-md-6 col-6 mt-1">
-                                    <img src="https://d2bxpw04qb5rhq.cloudfront.net/production/master_property_free_amenity/icon/11/f74ae06bd532e1b289e53b784ab84543bc33553b388923090668485fa4aa652211fb3c803306b314/marker_security.png" class="property-view__ic">
+                                    <img src="https://d2bxpw04qb5rhq.cloudfront.net/production/master_property_free_amenity/icon/11/f74ae06bd532e1b289e53b784ab84543bc33553b388923090668485fa4aa652211fb3c803306b314/marker_security.png"
+                                        class="property-view__ic">
                                     <span class="property-view__amenity">Security Guard</span>
                                 </div>
                                 <!-- <div class="col-md-6 col-6 mt-1">
@@ -77,9 +82,12 @@
                             Description
                         </mat-card-title>
                         <span class="borderstyle"></span>
+                        <mat-card-content>
+                            {{description}}
+                        </mat-card-content>
                     </mat-card>
                     <mat-card-content>
-                        
+
                     </mat-card-content>
                 </div>
             </div>
@@ -89,13 +97,211 @@
     </div>
 
     <div fxFlex="calc(25%-25px)" fxFlex.sm="calc(33%-25px)" fxFlex.md="calc(33%-25px)">
-        <mat-card class="fixed-card" style="margin-top:80px">
+        <!-- <mat-card class="fixed-card" style="margin-top:80px">
             <mat-card-title style="color:#32325d"><b>Price Details</b></mat-card-title>
             <mat-divider></mat-divider>
             <p class="parstyle">Items <b class="bstyle">{{count}}</b> </p>
             <p class="parstyle">Delivery Fee <i style="color: #388e3c;" class="bstyle">FREE</i></p>
             <mat-divider></mat-divider>
             <p class="parstyle">Total Payable <b class="bstyle">₹{{price}}</b> </p>
-        </mat-card>
+        </mat-card> -->
+
+        <!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+            {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+          </button> -->
+        <mat-horizontal-stepper style=" position: relative;
+          top: 75px;" linear>
+            <mat-step label="Booking Details" [completed]="true">
+                <mat-card>
+                    <mat-card-title style="color:#2C3E50;letter-spacing: 2px;">
+                        BOOKING DETAILS
+                    </mat-card-title>
+                    <mat-card-content>
+                        <button mat-raised-button style="background-color: #2dce89;color:white">Monthly</button>
+                    </mat-card-content>
+                    <mat-card-content>
+                        <p>Ac room types</p>
+                        <button mat-raised-button class="btnstyle">1 share</button>
+                        <button mat-raised-button class="btnstyle">2 share</button>
+                        <button mat-raised-button class="btnstyle">3 share</button>
+
+                    </mat-card-content>
+                    <mat-card-content>
+                        <div class="row">
+                          <div class="col-md-6 col-6">
+                              <p>No of Months</p>
+                              <mat-form-field style="width: 70px;" appearance="outline" >
+                                <input matInput type="number">
+                            </mat-form-field>
+                          </div>
+                      <div class="col-md-6 col-6">
+                            <p>No of Guests</p>
+                            <mat-form-field style="width: 70px" appearance="outline" >
+                                 <input matInput type="number" >
+                            </mat-form-field>
+                        </div>
+                    </div>
+                   
+                    </mat-card-content>
+                    <mat-card-content>
+                        <div class="row">
+                          <div class="col-md-6 col-6">
+                              <p>Check In Date</p>
+                              <mat-form-field appearance="outline" color="warn">
+                                <!-- <mat-label >Choose a date</mat-label> -->
+                                <input matInput [matDatepicker]="picker" [(ngModel)]="date">
+                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                              </mat-form-field>
+                          </div>
+                    </div>
+                    <!-- <div class="row"> -->
+                        <button matStepperNext mat-raised-button class="mybtnstyle">Check availability and Continue</button>
+                       <!-- </div> -->
+
+                    </mat-card-content>
+
+                    <!-- <mat-card-title style="color:#32325d;font-weight:600;
+                    margin: 15px 0;">
+                        Guest reviews
+                    </mat-card-title>
+                    <span class="borderstyle"></span>
+                    <mat-card-content>
+                        <p class="pstyle">Total reviews:
+                         <b class="bstyle">0</b>
+                        </p>
+                        <p class="pstyle">Average Rating: <b class="bstyle">0</b>
+                        </p>
+                        <button mat-raised-button class="reviewstyle" (click)="dialogopen()">Review</button>
+                    </mat-card-content> -->
+                    <hr>  
+                    <button mat-button matStepperNext disableRipple type="button">
+                      <mat-icon class="push">arrow_forward</mat-icon>
+                    </button>
+                </mat-card>
+            </mat-step>
+            <mat-step label="Guest Details" [completed]="true">
+                <!-- <div fxFlex fxLayout fxLayoutAlign.xs="center"> -->
+               <mat-card>
+                   <mat-card-title class="fs-style">
+                    Primary Guest details
+                   </mat-card-title>
+                   <h3 class="fs-substyle">
+                    Some guest info
+                   </h3>
+                   <mat-checkbox style="color:#2DCE89">Booking for self</mat-checkbox>
+                <form [formGroup]="myform" (ngSubmit)="onBooking()">
+                    <!-- <mat-form-field> -->
+                      
+                    <!-- </mat-form-field> -->
+                   
+                    <mat-form-field  appearance="outline" class="field">
+                        <mat-label>Name</mat-label>
+                        <input matInput 
+                        type="text" 
+                        formControlName="name">
+                      </mat-form-field>
+                      <mat-form-field appearance="outline" class="field">
+                        <mat-label>Phone No</mat-label>
+                        <input matInput
+                        
+                        formControlName="phoneno"
+                        type="text"
+                        >
+                      </mat-form-field><br>
+                      <mat-form-field appearance="outline" class="field">
+                          <mat-label>Email</mat-label>
+                          <input matInput
+                            
+                           type="email"
+                           formControlName="email"
+                           >
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="field">
+                          <mat-label>Locality</mat-label>
+                          <input matInput placeholder="address" 
+                          type="text"
+                          formControlName="address"
+                          required >
+                        </mat-form-field><br>
+                        <mat-form-field class="Id" appearance="outline" class="field">
+                            <mat-label>Id Proof</mat-label>
+                            <mat-select   formControlName="idproof">
+                                <mat-option value="license">Driving License</mat-option>
+                                <mat-option value="aadhar">Aadhar Card</mat-option>
+                                <mat-option value="voterid">Voter Id Card</mat-option>
+                                <!-- <mat-option value="user">User</mat-option> -->
+                            </mat-select>
+                          </mat-form-field>
+                          <mat-form-field appearance="outline" class="field">
+                            <mat-label>Id Proof No.</mat-label>
+                            <input matInput 
+                            type="text"
+                            formControlName="idno"
+                            required>
+                          </mat-form-field><br>
+                        
+                        <!-- <mat-form-field appearance="outline">
+                          <mat-label>Product Image</mat-label>
+                          <ngx-mat-file-input 
+                          placeholder="Basic Input"
+                          name="image"
+                          [ngModel]="staticImage"
+                          ngModel></ngx-mat-file-input>
+                          <mat-icon matSuffix>folder</mat-icon>
+                        </mat-form-field><br> -->
+                        <!-- <mat-form-field appearance="outline" class="field">
+                          <mat-label>ADDRESS</mat-label>
+                          <textarea matInput placeholder="Address" 
+                           name="address"
+                          required></textarea>
+                        </mat-form-field><br> -->
+                      
+        <!--                 
+                      <button mat-raised-button color="warn" type="submit">{{ editMode ? 'Update':'Add'}}</button>
+                      <button mat-raised-button color="primary" type="button" (click)="onCancel()" class="btn">cancel</button>
+                 -->  <button mat-raised-button matStepperNext class="paybtn" type="submit" >Submit</button>
+                     <hr>  
+                     <button mat-button matStepperPrevious disableRipple type="button">
+                        <mat-icon class="push">arrow_backword</mat-icon>
+                      </button>
+                     <button mat-button matStepperNext disableRipple type="button">
+                       <mat-icon class="push">arrow_forward</mat-icon>
+                     </button>
+                    
+                    </form>
+                <!-- </div> -->
+            </mat-card>
+            </mat-step>
+
+
+            <mat-step label="Payment Details" [completed]="completed">
+                
+                <mat-card class="paycard">
+                    <mat-card-title class="title"> Credit/Debit Card </mat-card-title>
+                  <form novalidate (ngSubmit)="buy()" [formGroup]="stripeTest">
+                    <mat-divider></mat-divider>
+                    <img class="myimage" src="../../../assets/paymentvisa.png" style="height: 30px;width: 80px;margin-left: 10px;margin-top: 12px;" mat-card-image>
+                    <br>
+                    <mat-form-field appearance="fill">
+                      <input matInput  type="text" formControlName="name" placeholder="Account Holder">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field appearance="fill">
+                      <input matInput type="number" formControlName="amount" placeholder="Amount"
+                      [ngModel]="amount">
+                    </mat-form-field>
+                    <div id="card-element" class="field"></div>
+                    <button type="submit" mat-raised-button class="paybtn" >
+                      Pay
+                    </button>
+                  </form>
+                  <hr>  
+                  <button mat-button matStepperPrevious disableRipple type="button">
+                    <mat-icon class="push">arrow_backword</mat-icon>
+                  </button>
+                  </mat-card>
+            </mat-step>
+        </mat-horizontal-stepper>
     </div>
 </div>

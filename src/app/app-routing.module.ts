@@ -16,7 +16,7 @@ const routes: Routes = [
   {path:'ownerportal',component:OwnerportalComponent,canActivate:[AuthGuard],children:[
      {path:'addrooms',component:AddroomsComponent}
   ]},
-  {path:'userportal',component:UserportalComponent,canActivate:[AuthGuard],children:[
+  {path:'userportal',component:UserportalComponent,children:[
    {path:'roomdetails/:id',component:RoomdetailsComponent}
   ]}
   // {path:'register',component:RegisterComponent},

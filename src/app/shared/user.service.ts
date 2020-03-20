@@ -7,12 +7,14 @@ import { Router } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
 import { AppComponent } from '../app.component';
 import { RoomInfo } from '../addrooms/room.model';
+import { RoomBooking } from '../roomdetails/roombook.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
   ///static token;
+  text:string;
   static user:RoomInfo;
   static id:number;
   readonly baseUrl="/";
@@ -91,6 +93,17 @@ export class UserService {
         console.log(res)
       }
     )
+   }
+
+   onRoomBooking(roombook:RoomBooking)
+   {
+      console.log(roombook)
+       this.http.post(this.baseUrl+'roombooking',roombook,{responseType:'json'}).subscribe(
+         (res)=>{
+           console.log(res)
+         }
+       )
+
    }
   // setToken()
   // {

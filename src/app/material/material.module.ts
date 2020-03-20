@@ -21,7 +21,9 @@ import {
     MatStepperModule,
     MatSelectModule,
     MatMenuModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   
 } from '@angular/material';
 //import { ProductComponent } from '../product/product.component';
@@ -47,7 +49,10 @@ import {
         MatStepperModule,
         MatSelectModule,
         MatMenuModule,
-        MatCheckboxModule
+        MatCheckboxModule,
+        MatDatepickerModule,
+        MatNativeDateModule
+
     ],
     exports: [
         MatToolbarModule,
@@ -69,7 +74,9 @@ import {
         MatStepperModule,
         MatSelectModule,
         MatMenuModule,
-        MatCheckboxModule
+        MatCheckboxModule,
+        MatDatepickerModule,
+        MatNativeDateModule
     ]    
   })
   export class MaterialModule { }
